@@ -19,11 +19,14 @@ let three = () => {
 
 
 const rotation = () => {
-    for (i = 0; i < 100; i++) {
-        setTimeout(one(), 1); 
-        setTimeout(two(), 1);
-        setTimeout(three(), 1);
+    i = 0; 
+    while (i < 100) {
+        setTimeout(function() {one()}, 3000); 
+        setTimeout(function() {two()}, 3000); 
+        setTimeout(function() {three()}, 3000); 
+        i++
     }
 }
+
 
 rotation()
